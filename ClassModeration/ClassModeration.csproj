@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D944267-846E-4BDF-A5EB-2D8E0AE10F24}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassModeration</RootNamespace>
+    <AssemblyName>ClassModeration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\NP\Desktop\Class Moderation\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>188660FBD9D021A5B58BA541680D6E7056CB0965</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ClassModeration_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\User.cs" />
+    <Compile Include="ClassModerationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassModerationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassModerationDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassModerationDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassModerationDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassModerationDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ClassModerationDAL.cs" />
+    <Compile Include="frmAddNewClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewClass.Designer.cs">
+      <DependentUpon>frmAddNewClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewClassDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewClassDetails.Designer.cs">
+      <DependentUpon>frmAddNewClassDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditClassDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditClassDetails.Designer.cs">
+      <DependentUpon>frmEditClassDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEdition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdition.Designer.cs">
+      <DependentUpon>frmEdition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditMyLesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMyLesson.Designer.cs">
+      <DependentUpon>frmEditMyLesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditRowDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditRowDetails.Designer.cs">
+      <DependentUpon>frmEditRowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportOption.Designer.cs">
+      <DependentUpon>frmReportOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShowClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowClass.Designer.cs">
+      <DependentUpon>frmShowClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\ClassDetails.cs" />
+    <Compile Include="BLL\Lesson.cs" />
+    <Compile Include="frmShowDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShowDetails.Designer.cs">
+      <DependentUpon>frmShowDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddNewClass.resx">
+      <DependentUpon>frmAddNewClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewClassDetails.resx">
+      <DependentUpon>frmAddNewClassDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditClassDetails.resx">
+      <DependentUpon>frmEditClassDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEdition.resx">
+      <DependentUpon>frmEdition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMyLesson.resx">
+      <DependentUpon>frmEditMyLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditRowDetails.resx">
+      <DependentUpon>frmEditRowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportOption.resx">
+      <DependentUpon>frmReportOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowClass.resx">
+      <DependentUpon>frmShowClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShowDetails.resx">
+      <DependentUpon>frmShowDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MyReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassModerationDataSet.xsc">
+      <DependentUpon>ClassModerationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassModerationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassModerationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassModerationDataSet.xss">
+      <DependentUpon>ClassModerationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassModerationDataSet1.xsc">
+      <DependentUpon>ClassModerationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ClassModerationDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassModerationDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassModerationDataSet1.xss">
+      <DependentUpon>ClassModerationDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ClassModerationDataSet2.xsc">
+      <DependentUpon>ClassModerationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ClassModerationDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassModerationDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassModerationDataSet2.xss">
+      <DependentUpon>ClassModerationDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ClassModeration_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incredible Mixed Wallpapers Downloadha %2819%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Converting Date\Converting Date.csproj">
+      <Project>{3df1bbbf-0203-4536-8dc6-a9e56b5b4dfd}</Project>
+      <Name>Converting Date</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
