@@ -55,12 +55,12 @@ namespace ClassModeration
         {
             PersianCalendar P = new PersianCalendar();
 
-            this.label2.Text = string.Format("{0:HH:mm:ss}", DateTime.Now);
+            this.label2.Text = string.Format("ساعت: {0:HH:mm:ss}", DateTime.Now);
             this.lblclock.Text = string.Format("{0:HH:mm:ss}", DateTime.Now);
             //System.DateTime.Now.ToLongTimeString();
             
             Converting_Date.Converting C= new Converting_Date.Converting();
-            this.label3.Text = C.ConvertDay() + " " + P.GetDayOfMonth(DateTime.Now) + " " + C.ConvertMonth() + " " + P.GetYear(DateTime.Now);
+            this.label3.Text = "تاریخ امروز: " + C.ConvertDay() + " " + P.GetDayOfMonth(DateTime.Now) + " " + C.ConvertMonth() + " " + P.GetYear(DateTime.Now);
                // P.GetYear(DateTime.Now) + "/" + P.GetMonth(DateTime.Now) + "/" + P.GetDayOfMonth(DateTime.Now);
             CheckStatus();
         }
