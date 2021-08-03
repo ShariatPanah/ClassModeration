@@ -1,4 +1,3 @@
-![FrmMain](https://user-images.githubusercontent.com/32509267/128017260-f3f4758e-1672-4f58-96a5-4a32f815f993.jpg)
 # ClassModeration
 this project is just for educational purposes. a very basic of class moderation.
 
